@@ -19,6 +19,11 @@ h1 {
     margin-left: calc(10% - 30px);
     border: 1px solid white;
     padding: 30px;
+    
+}
+
+.calendarBox h2 {
+    color: white;
 }
 
 .fc-view-container *, .fc-view-container :after, .fc-view-container :before {
