@@ -1,7 +1,8 @@
 CREATE TABLE events(
- title text,
+ title varchar,
+ description varchar,
  start_time timestamp,
  end_time timestamp
 )
 
-INSERT INTO events(title, color, description, notes, start_date, end_date) values ()
+INSERT INTO events(title, description, start_date, end_date) values ()
