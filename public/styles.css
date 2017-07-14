@@ -17,7 +17,7 @@ h1 {
 .calendarBox {
     width: 80%;
     margin-left: calc(10% - 30px);
-    border: 1px solid white;
+    border: 3px solid grey;
     padding: 30px;
     
 }
