@@ -5,9 +5,9 @@ angular.module('app', ['ui.calendar', 'ui.router'])
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-        .state('home', {
+        .state('calendar', {
             url: '/',
-            templateUrl: './views/home.html'
+            templateUrl: './views/calendar.html'
         })
 
         .state('goals',{
