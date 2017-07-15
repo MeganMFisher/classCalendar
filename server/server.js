@@ -14,10 +14,11 @@ var port = 3001;
 var app = express()
 app.use(bodyParser.json())
 
-const controller = require('./controller.js')
+const controller = require('./controller.js');
 
 
 app.get('/events', controller.getEvents);
+app.post('/events', controller.addEvent);
 
 
 app.listen(port, function() {
