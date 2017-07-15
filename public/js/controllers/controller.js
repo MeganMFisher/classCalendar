@@ -71,3 +71,11 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
 
 
 })
+
+//to do list for each mentor -add and remove do but still store.
+
+//links to the different sites we need. 
+
+//individual goals.
+
+//login 

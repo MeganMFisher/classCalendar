@@ -1,6 +1,20 @@
 'use strict';
 
-angular.module('app', ['ui.calendar']);
+angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('home', {
+        url: '/',
+        templateUrl: './views/home.html'
+    }).state('goals', {
+        url: '/goals',
+        templateUrl: './views/goals.html'
+    }).state('todo', {
+        url: '/todo',
+        templateUrl: './views/todo.html'
+    });
+});
 'use strict';
 
 angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalendarConfig, mainSrv) {
@@ -73,6 +87,14 @@ angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalen
   // }
 
 });
+
+//to do list for each mentor -add and remove do but still store.
+
+//links to the different sites we need. 
+
+//individual goals.
+
+//login
 'use strict';
 
 angular.module('app').service('mainSrv', function ($http) {
