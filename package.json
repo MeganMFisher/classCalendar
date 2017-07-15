@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MeganMFisher/classCalendar/issues"
   },
-  "homepage": "https://github.com/MeganMFisher/classCalendar#readme"
+  "homepage": "https://github.com/MeganMFisher/classCalendar#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
 }

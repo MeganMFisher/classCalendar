@@ -25,6 +25,6 @@ app.get('/events', controller.getEvents);
 app.post('/events', controller.addEvent);
 
 
-app.listen(port, function() {
-  console.log("Started server on port", port);
+app.listen(process.env.PORT || port, function () {
+  console.log('listening on port', this.address().port);
 });
