@@ -1,18 +1,22 @@
 const express = require('express'),
       bodyParser = require('body-parser'),
       massive = require('massive'),
-      config = require('./config.js')
+      config = require('./config.js'),
+      cors = require('cors')
+
+
+var port = 3001;
+
+var app = express();
+app.use(bodyParser.json());
+app.use(express.static('./public'));
+app.use(cors());
 
 massive(config.database).then(db => {
     app.set('db', db)
 }).catch((err) => {
     console.log(err)
 })
-
-var port = 3001;
-
-var app = express()
-app.use(bodyParser.json())
 
 const controller = require('./controller.js');
 

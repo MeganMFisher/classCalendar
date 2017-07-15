@@ -2,6 +2,18 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
 
  $scope.eventSources = [];
 
+ $scope.addToEvents = (eventToAdd) => {
+        mainSrv.addEvent(eventToAdd)
+  }
+
+  recEvents = () => {
+        mainSrv.getEvents().then((response) => {
+            $scope.eventStuff = response.data
+            console.log($scope.eventStuff)
+        })
+    }
+  recEvents()
+
 
   $scope.uiConfig = {
     calendar: {
