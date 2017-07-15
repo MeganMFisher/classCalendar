@@ -17,6 +17,9 @@ app.use(bodyParser.json())
 const controller = require('./controller.js')
 
 
+app.get('/events', controller.getEvents);
+
+
 app.listen(port, function() {
   console.log("Started server on port", port);
 });
