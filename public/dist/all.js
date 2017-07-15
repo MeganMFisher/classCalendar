@@ -13,6 +13,9 @@ angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvi
     }).state('todo', {
         url: '/todo',
         templateUrl: './views/todo.html'
+    }).state('resources', {
+        url: '/resources',
+        templateUrl: './views/resources.html'
     });
 });
 'use strict';

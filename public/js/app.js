@@ -19,5 +19,10 @@ angular.module('app', ['ui.calendar', 'ui.router'])
             url: '/todo',   
             templateUrl: './views/todo.html'
         })
+
+        .state('resources', {
+            url: '/resources',   
+            templateUrl: './views/resources.html'
+        })
         
 })

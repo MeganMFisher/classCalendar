@@ -16,7 +16,7 @@ nav {
 }
 
 nav div {
-    width: 400px;
+    width: 500px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,8 +27,12 @@ nav div a {
     color: white;
     text-decoration: none;
     font-size: 22px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
+
+/* ******************************
+             Calendar
+****************************** */
 
 .mainSection{
     width: 100%;
@@ -63,4 +67,38 @@ h1 {
 
 .fc-unthemed .fc-today {
     /* color: #528da4; */
+}
+
+/* ******************************
+              Goals
+****************************** */
+
+
+
+/* ******************************
+              To Do
+****************************** */
+
+
+
+/* ******************************
+             Resources
+****************************** */
+
+.resourcesBox {
+    width: 80%;
+    margin-left: calc(10% - 30px);
+    border: 3px solid grey;
+    padding: 30px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.resourcesBox a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
 }
