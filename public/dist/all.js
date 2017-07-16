@@ -9,10 +9,12 @@ angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvi
         templateUrl: './views/calendar.html'
     }).state('goals', {
         url: '/goals',
-        templateUrl: './views/goals.html'
+        templateUrl: './views/goals.html',
+        controller: 'goalCtrl'
     }).state('todo', {
         url: '/todo',
-        templateUrl: './views/todo.html'
+        templateUrl: './views/todo.html',
+        controller: 'todoCtrl'
     }).state('resources', {
         url: '/resources',
         templateUrl: './views/resources.html'
@@ -47,7 +49,7 @@ angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalen
   $scope.recEvents = function () {
     mainSrv.getEvents().then(function (response) {
       var events = response.data;
-      console.log(events);
+      // console.log(events)
       // events.map(e => {
       //   const {title, description, end_time, start_time } = e
 
@@ -102,57 +104,92 @@ angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalen
 
 angular.module('app').controller('goalCtrl', function ($scope, mainSrv) {
 
-  recGoal = function recGoal() {
-    mainSrv.getGoals().then(function (response) {
-      $scope.goals = response.data;
-      console.log($scope.goals);
+    // $scope.recGoal = () => {
+    // mainSrv.getGoals().then((response) => {
+    //   $scope.goals = response.data;
+    //   console.log($scope.goals)
+    // })
+    // }
+    // $scope.recGoal()
+
+    mainSrv.getGoals().then(function (res) {
+        $scope.m1Goals = mainSrv.mentorGoals(res, 1);
+        $scope.m2Goals = mainSrv.mentorGoals(res, 2);
+        $scope.m3Goals = mainSrv.mentorGoals(res, 3);
     });
-  };
-  recGoal();
 });
 'use strict';
 
 angular.module('app').controller('todoCtrl', function ($scope, mainSrv) {
 
-  recTodo = function recTodo() {
-    mainSrv.getTodos().then(function (response) {
-      $scope.todos = response.data;
-      console.log($scope.todos);
+    // $scope.recTodo = () => {
+    // mainSrv.getTodos().then((response) => {
+    //   $scope.todos = response.data;
+    //   console.log($scope.todos)
+    // })
+    // }
+    // $scope.recTodo()
+
+    mainSrv.getTodos().then(function (res) {
+        $scope.m1Todos = mainSrv.mentorTodos(res, 1);
+        $scope.m2Todos = mainSrv.mentorTodos(res, 2);
+        $scope.m3Todos = mainSrv.mentorTodos(res, 3);
     });
-  };
-  recTodo();
 });
 'use strict';
 
 angular.module('app').service('mainSrv', function ($http) {
 
-   //Events
+    //Events
 
-   this.getEvents = function () {
-      return $http.get('http://localhost:3001/events');
-   };
+    this.getEvents = function () {
+        return $http.get('http://localhost:3001/events');
+    };
 
-   this.addEvent = function (eventInfo) {
-      return $http.post('http://localhost:3001/events', eventInfo);
-   };
+    this.addEvent = function (eventInfo) {
+        return $http.post('http://localhost:3001/events', eventInfo);
+    };
 
-   //Todos
+    //Todos
 
-   this.getTodos = function () {
-      return $http.get('http://localhost:3001/todos');
-   };
+    this.getTodos = function () {
+        return $http.get('http://localhost:3001/todos');
+    };
 
-   this.addTodo = function (todoInfo) {
-      return $http.post('http://localhost:3001/todos', todoInfo);
-   };
+    this.mentorTodos = function (res, mID) {
+        var allTodos = res.data;
+        console.log(allTodos);
+        var todos = [];
+        for (var i = 0; i < allTodos.length; i++) {
+            if (mID === allTodos[i].mentorid) {
+                todos.push(allTodos[i]);
+            }
+        }
+        return todos;
+    };
 
-   //Goals
+    this.addTodo = function (todoInfo) {
+        return $http.post('http://localhost:3001/todos', todoInfo);
+    };
 
-   this.getGoals = function () {
-      return $http.get('http://localhost:3001/goals');
-   };
+    //Goals
 
-   this.addGoal = function (goalInfo) {
-      return $http.post('http://localhost:3001/goals', goalInfo);
-   };
+    this.getGoals = function () {
+        return $http.get('http://localhost:3001/goals');
+    };
+
+    this.mentorGoals = function (res, mID) {
+        var allGoals = res.data;
+        var goals = [];
+        for (var i = 0; i < allGoals.length; i++) {
+            if (mID === allGoals[i].mentorid) {
+                goals.push(allGoals[i]);
+            }
+        }
+        return goals;
+    };
+
+    this.addGoal = function (goalInfo) {
+        return $http.post('http://localhost:3001/goals', goalInfo);
+    };
 });

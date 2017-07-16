@@ -25,7 +25,7 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
   $scope.recEvents = () => {
     mainSrv.getEvents().then((response) => {
       var events = response.data;
-      console.log(events)
+      // console.log(events)
       // events.map(e => {
       //   const {title, description, end_time, start_time } = e
 

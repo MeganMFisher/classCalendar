@@ -12,12 +12,14 @@ angular.module('app', ['ui.calendar', 'ui.router'])
 
         .state('goals',{
             url: '/goals',
-            templateUrl: './views/goals.html'
+            templateUrl: './views/goals.html',
+            controller: 'goalCtrl'
         })
 
         .state('todo', {
             url: '/todo',   
-            templateUrl: './views/todo.html'
+            templateUrl: './views/todo.html',
+            controller: 'todoCtrl'
         })
 
         .state('resources', {
