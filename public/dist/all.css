@@ -392,3 +392,220 @@ template {
  */
 [hidden] {
   display: none; }
+
+body {
+  background: #222;
+  font-family: sans-serif; }
+
+nav {
+  width: 100%;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 3px solid black;
+  /* background: #333; */ }
+
+.DM {
+  margin-left: 50px; }
+
+nav div {
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 50px; }
+
+nav div a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  letter-spacing: 3px; }
+
+/* ******************************
+             Calendar
+****************************** */
+.mainSection {
+  margin-top: 30px;
+  width: 100%;
+  height: 100vh; }
+
+h1 {
+  color: #528da4;
+  letter-spacing: 3px;
+  text-align: center; }
+
+.calendarBox {
+  width: 80%;
+  margin-left: calc(10% - 30px);
+  /* border: 3px solid grey; */
+  padding: 30px;
+  background: #111;
+  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4); }
+
+.calendarBox h2 {
+  color: white; }
+
+.fc-view-container *, .fc-view-container :after, .fc-view-container :before {
+  background: white; }
+
+.fc-unthemed td.fc-today {
+  /* color: #528da4; */ }
+
+.fc-unthemed .fc-today {
+  /* color: #528da4; */ }
+
+/* ******************************
+              Goals
+****************************** */
+.goalSection {
+  margin-top: 30px;
+  width: 100%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.goalBoxes {
+  width: 30%;
+  height: 100%;
+  background: #111;
+  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.goalBoxes h3 {
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+  height: 10px;
+  /* background: red; */ }
+
+.goalBoxes div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.goalBox {
+  width: 80%;
+  height: 55vh;
+  background: #333;
+  margin-left: 10%;
+  overflow-y: scroll;
+  overflow: auto; }
+
+.inputBox {
+  width: 100%;
+  height: 40px;
+  padding-left: 10%; }
+
+.inputBox input {
+  width: 68%;
+  height: 25px;
+  background: #333;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  padding-left: 10px; }
+
+.inputBox textarea:focus, input:focus {
+  padding-left: 10px;
+  outline: none;
+  color: white;
+  border: none;
+  height: 25px;
+  width: 68%; }
+
+.inputBox button {
+  width: 10%;
+  height: 27px;
+  background: #528da4;
+  outline: none;
+  text-decoration: none;
+  border: none; }
+
+/* ******************************
+              To Do
+****************************** */
+/* ******************************
+             Resources
+****************************** */
+.resourcesBox {
+  margin-top: 30px;
+  width: 80%;
+  margin-left: calc(10% - 30px);
+  padding: 30px;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #111;
+  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4); }
+
+.resourcesBox div {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.resourcesBox h2 {
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  color: white;
+  font-weight: lighter; }
+
+.resourcesBox a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #222;
+  line-height: 2;
+  letter-spacing: 3px;
+  font-weight: bold;
+  width: 350px;
+  height: 40px;
+  background: #528da4;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid black; }

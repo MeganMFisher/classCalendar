@@ -100,7 +100,33 @@ angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalen
 //login
 'use strict';
 
+angular.module('app').controller('goalCtrl', function ($scope, mainSrv) {
+
+  recGoal = function recGoal() {
+    mainSrv.getGoals().then(function (response) {
+      $scope.goals = response.data;
+      console.log($scope.goals);
+    });
+  };
+  recGoal();
+});
+'use strict';
+
+angular.module('app').controller('todoCtrl', function ($scope, mainSrv) {
+
+  recTodo = function recTodo() {
+    mainSrv.getTodos().then(function (response) {
+      $scope.todos = response.data;
+      console.log($scope.todos);
+    });
+  };
+  recTodo();
+});
+'use strict';
+
 angular.module('app').service('mainSrv', function ($http) {
+
+   //Events
 
    this.getEvents = function () {
       return $http.get('http://localhost:3001/events');
@@ -108,5 +134,25 @@ angular.module('app').service('mainSrv', function ($http) {
 
    this.addEvent = function (eventInfo) {
       return $http.post('http://localhost:3001/events', eventInfo);
+   };
+
+   //Todos
+
+   this.getTodos = function () {
+      return $http.get('http://localhost:3001/todos');
+   };
+
+   this.addTodo = function (todoInfo) {
+      return $http.post('http://localhost:3001/todos', todoInfo);
+   };
+
+   //Goals
+
+   this.getGoals = function () {
+      return $http.get('http://localhost:3001/goals');
+   };
+
+   this.addGoal = function (goalInfo) {
+      return $http.post('http://localhost:3001/goals', goalInfo);
    };
 });
