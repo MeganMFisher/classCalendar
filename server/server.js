@@ -22,7 +22,12 @@ const controller = require('./controller.js');
 
 
 app.get('/events', controller.getEvents);
+app.get('/todos', controller.getTodos);
+app.get('/goals', controller.getGoals);
 app.post('/events', controller.addEvent);
+app.post('/todos', controller.addTodo);
+app.post('/goals', controller.addGoal);
+
 
 
 app.listen(process.env.PORT || port, function () {

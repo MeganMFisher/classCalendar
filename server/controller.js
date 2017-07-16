@@ -6,6 +6,18 @@ module.exports = {
         })
     },
 
+    getTodos: (req, res) => {
+        req.app.get('db').getTodos().then((response) => {
+            res.send(response)
+        })
+    },
+
+    getGoals: (req, res) => {
+        req.app.get('db').getGoals().then((response) => {
+            res.send(response)
+        })
+    },
+
     addEvent: (req, res) => {
         var params = [
             req.body.title,
@@ -18,5 +30,24 @@ module.exports = {
         })
     },
 
+    addTodo: (req, res) => {
+        var params = [
+            req.body.mentorID,
+            req.body.todo
+        ]
+        req.app.get('db').addTodo(params).then((response) => {
+            res.send('Todo Added')
+        })
+    },
+
+    addGoal: (req, res) => {
+        var params = [
+            req.body.mentorID,
+            req.body.goal
+        ]
+        req.app.get('db').addGoal(params).then((response) => {
+            res.send('Goal Added')
+        })
+    },
 
 }
