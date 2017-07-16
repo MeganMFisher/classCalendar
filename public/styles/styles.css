@@ -9,6 +9,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 3px solid black;
+    /* background: #333; */
 }
 
 .DM {
@@ -35,6 +37,7 @@ nav div a {
 ****************************** */
 
 .mainSection{
+    margin-top: 30px;
     width: 100%;
     height: 100vh;
 }
@@ -48,9 +51,10 @@ h1 {
 .calendarBox {
     width: 80%;
     margin-left: calc(10% - 30px);
-    border: 3px solid grey;
+    /* border: 3px solid grey; */
     padding: 30px;
-    
+    background: #111;
+    box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, .4);    
 }
 
 .calendarBox h2 {
@@ -73,7 +77,81 @@ h1 {
               Goals
 ****************************** */
 
+.goalSection {
+    margin-top: 30px;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+}
 
+.goalBoxes {
+    width: 30%;
+    height: 100%;
+    background: #111;
+    box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, .4);
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+
+.goalBoxes h3 {
+    text-align: center;
+    color: white;
+    letter-spacing: 3px; 
+    height: 10px;
+    /* background: red; */
+}
+
+.goalBoxes div {
+    display: flex;
+}
+
+.goalBox {
+    width: 80%;
+    height: 55vh;
+    background: #333; 
+    margin-left: 10%;
+    overflow-y: scroll;
+    overflow: auto;
+}
+
+.inputBox {
+    width: 100%;
+    height: 40px; 
+    padding-left: 10%;
+
+}
+
+.inputBox input {
+    width: 68%;
+    height: 25px; 
+    background: #333;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    padding-left: 10px; 
+    
+}
+
+.inputBox textarea:focus, input:focus{
+     padding-left: 10px; 
+    outline: none;
+    color: white;
+    border: none;
+    height: 25px; 
+    width: 68%;    
+}
+
+
+.inputBox button {
+    width: 10%;
+    height: 27px; 
+    background: #528da4;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
 
 /* ******************************
               To Do
@@ -86,24 +164,25 @@ h1 {
 ****************************** */
 
 .resourcesBox {
+    margin-top: 30px;
     width: 80%;
     margin-left: calc(10% - 30px);
-    border: 3px solid grey;
     padding: 30px;
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #111;  
+    box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, .4);
 }
 
 .resourcesBox div {
     width: 50%;
     height: 100%;
-     /* background: #444;  */
     display: flex;
     flex-direction: column;
     align-items: center;
-     justify-content: center; 
+    justify-content: center; 
 }
 
 .resourcesBox h2 {
