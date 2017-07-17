@@ -104,31 +104,20 @@ angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalen
 
 angular.module('app').controller('goalCtrl', function ($scope, mainSrv) {
 
-    // $scope.recGoal = () => {
-    // mainSrv.getGoals().then((response) => {
-    //   $scope.goals = response.data;
-    //   console.log($scope.goals)
-    // })
-    // }
-    // $scope.recGoal()
-
     mainSrv.getGoals().then(function (res) {
         $scope.m1Goals = mainSrv.mentorGoals(res, 1);
         $scope.m2Goals = mainSrv.mentorGoals(res, 2);
         $scope.m3Goals = mainSrv.mentorGoals(res, 3);
     });
+
+    $scope.removeGoal = function (id, mentorid) {
+        console.log(id);
+        console.log(mentorid);
+    };
 });
 'use strict';
 
 angular.module('app').controller('todoCtrl', function ($scope, mainSrv) {
-
-    // $scope.recTodo = () => {
-    // mainSrv.getTodos().then((response) => {
-    //   $scope.todos = response.data;
-    //   console.log($scope.todos)
-    // })
-    // }
-    // $scope.recTodo()
 
     mainSrv.getTodos().then(function (res) {
         $scope.m1Todos = mainSrv.mentorTodos(res, 1);

@@ -3,7 +3,8 @@
         <h3>Megan</h3>
         <div class='goalBox'>
             <div ng-repeat='goal in m1Goals'>
-                {{goal.goal}}
+                <p>{{goal.goal}}</p>
+                <button ng-click='removeGoal(goal.goal, goal.mentorid)'>X</button>
             </div>
 
         </div>
@@ -17,7 +18,8 @@
         <h3>Taylor</h3>
         <div class='goalBox'>
             <div ng-repeat='goal in m2Goals'>
-                {{goal.goal}}
+                <p>{{goal.goal}}</p>
+                <button ng-click='removeGoal'>X</button>
             </div>
 
 
@@ -32,7 +34,8 @@
         <h3>Ian</h3>
         <div class='goalBox'>
             <div ng-repeat='goal in m3Goals'>
-                {{goal.goal}}
+                <p>{{goal.goal}}</p>
+                <button ng-click='removeGoal'>X</button>
             </div>
 
 

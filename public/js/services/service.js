@@ -38,7 +38,6 @@ angular.module('app').service('mainSrv', function($http){
     return $http.get('http://localhost:3001/goals')
     }
 
-
    this.mentorGoals = (res, mID) => {
        var allGoals = res.data;
        var goals = []
