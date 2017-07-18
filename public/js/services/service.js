@@ -10,6 +10,15 @@ angular.module('app').service('mainSrv', function($http){
     return $http.post('http://localhost:3001/events', eventInfo)
     }
 
+
+
+
+
+
+
+
+
+    
     //Todos
 
     this.getTodos = () => {

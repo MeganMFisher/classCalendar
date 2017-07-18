@@ -24,7 +24,10 @@ angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvi
 
 angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalendarConfig, mainSrv) {
 
+  $scope.showModal = false;
+
   $scope.events = [];
+  $scope.eventSources = [$scope.events];
 
   $scope.uiConfig = {
     calendar: {
@@ -49,20 +52,24 @@ angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalen
   $scope.recEvents = function () {
     mainSrv.getEvents().then(function (response) {
       var events = response.data;
-      // console.log(events)
-      // events.map(e => {
-      //   const {title, description, end_time, start_time } = e
+      console.log(events);
+      events.map(function (e) {
+        var title = e.title,
+            description = e.description,
+            end_time = e.end_time,
+            start_time = e.start_time;
 
-      //   let startTime = moment(start_time).format()
-      //   let endTime = moment(end_time).format()
 
-      //   $scope.events.push({
-      //         title: title,
-      //         descrition: descrition,
-      //         start: startTime,
-      //         end: endTime
-      //       })
-      // })
+        var startTime = moment(start_time).format();
+        var endTime = moment(end_time).format();
+
+        $scope.events.push({
+          title: title,
+          description: description,
+          start: startTime,
+          end: endTime
+        });
+      });
     });
   };
   $scope.recEvents();

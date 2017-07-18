@@ -1,6 +1,10 @@
 angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalendarConfig, mainSrv){
 
- $scope.events = []
+  $scope.showModal = false
+
+  $scope.events = []
+  $scope.eventSources = [ $scope.events ]
+ 
 
   $scope.uiConfig = {
     calendar: {
@@ -25,24 +29,23 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
   $scope.recEvents = () => {
     mainSrv.getEvents().then((response) => {
       var events = response.data;
-      // console.log(events)
-      // events.map(e => {
-      //   const {title, description, end_time, start_time } = e
+      console.log(events)
+      events.map(e => {
+        const {title, description, end_time, start_time } = e
 
-      //   let startTime = moment(start_time).format()
-      //   let endTime = moment(end_time).format()
+        let startTime = moment(start_time).format()
+        let endTime = moment(end_time).format()
 
-      //   $scope.events.push({
-      //         title: title,
-      //         descrition: descrition,
-      //         start: startTime,
-      //         end: endTime
-      //       })
-      // })
+        $scope.events.push({
+              title: title,
+              description: description,
+              start: startTime,
+              end: endTime
+            })
+      })
     })
   } 
   $scope.recEvents()
-
 
 
   // $scope.addEvent = function (event) {

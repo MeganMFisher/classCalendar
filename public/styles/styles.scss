@@ -18,7 +18,7 @@ nav {
 }
 
 nav div {
-    width: 500px;
+    width: 300px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -227,3 +227,75 @@ h1 {
     margin-bottom: 20px;
     border: 1px solid black;
 }
+
+
+
+
+
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.event-form {
+    display: flex;
+    background-color: #222;
+    margin: auto;
+    width: 60%;
+    height:60%;
+    z-index: 2;
+    box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, .4);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 1px solid #444;
+}
+
+form {
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.event-form input {
+    height: 30px;
+}
+
+.event-form input:active {
+    width: 100%;
+}
+
+.addEventButton {
+    margin-bottom: 10px;
+    background-color: #528da4;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    width: 160px;
+    height: 30px;
+}
+
+.closeEventButton {
+    width: 25px;
+}
+
+
+
+
+
