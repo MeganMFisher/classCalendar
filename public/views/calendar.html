@@ -15,10 +15,10 @@
                 <h1>Add Event</h1>
             <button class='closeEventButton' ng-click="showModal = !showModal">X</button>
             </div>
-            <input type="text" placeholder="Event Title" ng-model="event.title">
+            <input type="text" placeholder="Event Title" ng-model="event.title"> 
             <input type="text" placeholder="Description" ng-model="event.description">
-            <input type="datetime-local" placeholder="start time" ng-model="event.start_time">
-            <input type="datetime-local" placeholder="end time" ng-model="event.end_time">
+            <input type="datetime-local" placeholder="Start Time" ng-model="event.start_time">
+            <input type="datetime-local" placeholder="End Time" ng-model="event.end_time">
             <button type="button" class="addEventButton" ng-click="addEvent(event)">+</button>
         </form>
 
