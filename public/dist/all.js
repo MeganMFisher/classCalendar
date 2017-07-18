@@ -22,6 +22,8 @@ angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvi
 });
 'use strict';
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalendarConfig, mainSrv) {
 
   $scope.showModal = false;
@@ -40,7 +42,11 @@ angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalen
         left: 'today prev,next',
         center: 'title',
         right: 'month, agendaWeek agendaDay'
-      }
+      },
+      eventClick: $scope.alertEventOnClick,
+      eventDrop: $scope.alertOnDrop,
+      eventResize: $scope.alertOnResize,
+      eventRender: $scope.eventRender
     }
   };
 
@@ -74,30 +80,26 @@ angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalen
   };
   $scope.recEvents();
 
-  // $scope.addEvent = function (event) {
-  //   mainSrv.addEvent(event).then(response => {
-  //     const {
-  //       title,
-  //       description,
-  //       start_time,
-  //       end_time
-  //     } = response.data[0]
+  $scope.addEvent = function (event) {
+    console.log(event);
+    mainSrv.addEvent(event).then(function (response) {
+      var _$scope$events$push;
 
-  //     let startTime = moment(start_time).format()
-  //     let endTime = moment(end_time).format()
+      var _response$data$ = response.data[0],
+          title = _response$data$.title,
+          description = _response$data$.description,
+          start_time = _response$data$.start_time,
+          end_time = _response$data$.end_time;
 
 
-  //     $scope.events.push({
-  //       title: title,
-  //       description, description,
-  //       start: startTime,
-  //       end: endTime
-  //     })
+      var startTime = moment(start_time).format();
+      var endTime = moment(end_time).format();
 
-  //   })
-
-  // }
-
+      $scope.events.push((_$scope$events$push = {
+        title: title,
+        description: description }, _defineProperty(_$scope$events$push, 'description', description), _defineProperty(_$scope$events$push, 'start', startTime), _defineProperty(_$scope$events$push, 'end', endTime), _$scope$events$push));
+    });
+  };
 });
 
 //to do list for each mentor -add and remove do but still store.
@@ -143,6 +145,7 @@ angular.module('app').service('mainSrv', function ($http) {
     };
 
     this.addEvent = function (eventInfo) {
+        console.log(eventInfo);
         return $http.post('http://localhost:3001/events', eventInfo);
     };
 

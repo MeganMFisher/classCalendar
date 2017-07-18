@@ -17,7 +17,11 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
         left: 'today prev,next',
         center: 'title',
         right: 'month, agendaWeek agendaDay'
-      }
+      },
+      eventClick: $scope.alertEventOnClick,
+      eventDrop: $scope.alertOnDrop,
+      eventResize: $scope.alertOnResize,
+      eventRender: $scope.eventRender
     }
   };
 
@@ -48,29 +52,30 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
   $scope.recEvents()
 
 
-  // $scope.addEvent = function (event) {
-  //   mainSrv.addEvent(event).then(response => {
-  //     const {
-  //       title,
-  //       description,
-  //       start_time,
-  //       end_time
-  //     } = response.data[0]
+  $scope.addEvent = function (event) {
+    console.log(event)
+    mainSrv.addEvent(event).then(response => {
+      const {
+        title,
+        description,
+        start_time,
+        end_time
+      } = response.data[0]
 
-  //     let startTime = moment(start_time).format()
-  //     let endTime = moment(end_time).format()
+      let startTime = moment(start_time).format()
+      let endTime = moment(end_time).format()
 
 
-  //     $scope.events.push({
-  //       title: title,
-  //       description, description,
-  //       start: startTime,
-  //       end: endTime
-  //     })
+      $scope.events.push({
+        title: title,
+        description, description,
+        start: startTime,
+        end: endTime
+      })
 
-  //   })
+    })
 
-  // }
+  }
 
 
 })

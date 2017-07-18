@@ -19,11 +19,12 @@ module.exports = {
     },
 
     addEvent: (req, res) => {
+        console.log(req.body)
         var params = [
             req.body.title,
             req.body.description,
-            req.body.startTime,
-            req.body.endTime
+            toString(req.body.startTime),
+            toString(req.body.endTime)
         ]
         req.app.get('db').addEvent(params).then((response) => {
             res.send('Event Added')
