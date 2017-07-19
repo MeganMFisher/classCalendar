@@ -7,7 +7,7 @@ angular.module('app').service('mainSrv', function($http){
     }
 
     this.addEvent = (eventInfo) => {
-        console.log(eventInfo)
+        // console.log(eventInfo)
     return $http.post('http://localhost:3001/events', eventInfo)
     }
 

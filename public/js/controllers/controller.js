@@ -33,7 +33,7 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
   $scope.recEvents = () => {
     mainSrv.getEvents().then((response) => {
       var events = response.data;
-      console.log(events)
+      // console.log(events)
       events.map(e => {
         const {title, description, end_time, start_time } = e
 
@@ -53,25 +53,44 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
 
 
   $scope.addEvent = function (event) {
-    console.log(event)
-    mainSrv.addEvent(event).then(response => {
-      const {
-        title,
-        description,
-        start_time,
-        end_time
-      } = response.data[0]
 
-      let startTime = moment(start_time).format()
-      let endTime = moment(end_time).format()
+    let startTime = moment(event.start_time).format()
+    let endTime = moment(event.end_time).format()
+
+console.log(event)
+    var eventInfo = {
+      title: event.title,
+      description: event.description,
+      start_time: startTime,
+      end_time: endTime
+    }
+
+    console.log(eventInfo)
 
 
-      $scope.events.push({
-        title: title,
-        description, description,
-        start: startTime,
-        end: endTime
-      })
+
+    // console.log(event)
+    mainSrv.addEvent(eventInfo).then(response => {
+      // const {
+      //   title,
+      //   description,
+      //   start_time,
+      //   end_time
+      // } = response.data[0]
+      // console.log(response.data[0])
+
+      // let startTime = moment(start_time).format()
+      // let endTime = moment(end_time).format()
+
+      //   console.log(startTime)
+
+      // $scope.events.push({
+      //   title: title,
+      //   description, description,
+      //   start: startTime,
+      //   end: endTime
+      // })
+      // console.log($scope.events)
 
     })
 

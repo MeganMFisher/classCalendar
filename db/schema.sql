@@ -5,8 +5,8 @@ CREATE TABLE events(
  end_time date
 )
 
-INSERT INTO events(title, description, start_time, end_time) values ('movie marathon', 'awesomeness', '10-11-17', '10-13-17')
 
+INSERT INTO events(title, description, start_time, end_time) values ('movie marathon', 'awesomeness', '2017-07-18T20:50:03-06:00', '2017-07-18T20:58:02-06:00')
 
 
 CREATE TABLE todo(
