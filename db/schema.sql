@@ -8,10 +8,10 @@ CREATE TABLE events(
 )
 
 
-INSERT INTO events(title, description, start_time, end_time) values ('Blow Bubbles', 'awesomeness', '2017-07-12T20:50:03-06:00', '2017-07-18T20:58:02-06:00'),
-('Build Fort', 'awesomeness', '2017-07-7T20:50:03-06:00', '2017-07-10T20:58:02-06:00'),
-('movie marathon', 'awesomeness', '2017-07-18T20:50:03-06:00', '2017-07-18T20:58:02-06:00'),
-('Eat Pie', 'awesomeness', '2017-07-24T20:50:03-06:00', '2017-07-26T20:58:02-06:00')
+INSERT INTO events(title, description, start_time, end_time) values ('Blow Bubbles', 'awesomeness', '2017-07-12T20:50:03-06:00', '2017-07-12T20:58:02-08:00'),
+('Build Fort', 'awesomeness', '2017-07-17T20:50:03-07:00', '2017-07-17T20:58:02-09:00'),
+('movie marathon', 'awesomeness', '2017-07-18T20:50:03-06:00', '2017-07-18T20:58:02-08:00'),
+('Eat Pie', 'awesomeness', '2017-07-24T20:50:03-06:00', '2017-07-24T20:58:02-08:00')
 
 
 CREATE TABLE todo(

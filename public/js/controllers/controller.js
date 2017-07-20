@@ -33,7 +33,7 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
   $scope.recEvents = () => {
     mainSrv.getEvents().then((response) => {
       var events = response.data;
-      // console.log(events)
+      console.log(events)
       events.map(e => {
         const {title, description, end_time, start_time } = e
 
@@ -64,7 +64,7 @@ console.log(event)
       end_time: endTime
     }
 
-    console.log(eventInfo)
+    // console.log(eventInfo)
 
 
 
@@ -94,6 +94,40 @@ console.log(event)
     })
 
   }
+
+  //  $scope.extraEventSignature = function (event) {
+  //   return "" + event.price;
+  // }
+  // /* remove event */
+  // $scope.remove = function (index) {
+  //   $scope.events.splice(index, 1);
+  // };
+  // /* Change View */
+  // $scope.changeView = function (view, calendar) {
+  //   uiCalendarConfig.calendars[calendar].fullCalendar('changeView', view);
+  // };
+
+  // /* Change View */
+  // $scope.renderCalender = function (calendar) {
+  //   if (uiCalendarConfig.calendars[calendar]) {
+  //     uiCalendarConfig.calendars[calendar].fullCalendar('render');
+  //   }
+  // };
+  // /* Render Tooltip */
+  // $scope.eventRender = function (event, element, view) {
+  //   element.attr({
+  //     'tooltip': event.title,
+  //     'tooltip-append-to-body': true
+  //   });
+  //   $compile(element)($scope);
+  // };
+
+
+
+
+
+  // /* event sources array*/
+  // $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
 
 
 })
