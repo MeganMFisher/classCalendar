@@ -79,10 +79,9 @@ angular.module('app').controller('mainCtrl', function ($scope, $compile, uiCalen
   $scope.recEvents();
 
   $scope.addEvent = function (event) {
-
     var startTime = moment(event.start_time).format();
     var endTime = moment(event.end_time).format();
-
+    console.log(startTime, endTime, event.start_time);
     console.log(event);
     var eventInfo = {
       title: event.title,

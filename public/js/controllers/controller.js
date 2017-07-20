@@ -53,10 +53,9 @@ angular.module('app').controller('mainCtrl', function($scope, $compile, uiCalend
 
 
   $scope.addEvent = function (event) {
-
     let startTime = moment(event.start_time).format()
     let endTime = moment(event.end_time).format()
-
+console.log(startTime, endTime, event.start_time)
 console.log(event)
     var eventInfo = {
       title: event.title,
