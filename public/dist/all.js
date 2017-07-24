@@ -18,6 +18,9 @@ angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvi
     }).state('resources', {
         url: '/resources',
         templateUrl: './views/resources.html'
+    }).state('links', {
+        url: '/links',
+        templateUrl: './views/links.html'
     });
 });
 'use strict';

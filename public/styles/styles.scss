@@ -309,7 +309,41 @@ form div {
 
 
 
+// Links
 
+.linksPage {
+    width: 100%;
+    display: flex;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.bigBoxes {
+    width: 50%;
+}
+
+
+.linkBoxes {
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.linkBoxes h2 {
+    color: black;
+}
+
+.linkBoxes div {
+    display: flex; 
+    // flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.linkBoxes a {
+    text-decoration: none;
+    color: grey;
+
+}
 
 
 

@@ -27,4 +27,9 @@ angular.module('app', ['ui.calendar', 'ui.router'])
             templateUrl: './views/resources.html'
         })
         
+        .state('links', {
+            url: '/links',   
+            templateUrl: './views/links.html'
+        })
+        
 })

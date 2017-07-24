@@ -716,3 +716,35 @@ form div {
   text-align: center;
   margin-bottom: 20px;
   border: 1px solid black; }
+
+.linksPage {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 100px;
+  padding-top: 50px; }
+
+.bigBoxes {
+  width: 50%; }
+
+.linkBoxes {
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px; }
+
+.linkBoxes h2 {
+  color: black; }
+
+.linkBoxes div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.linkBoxes a {
+  text-decoration: none;
+  color: grey; }
