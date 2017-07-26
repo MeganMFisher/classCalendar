@@ -1,23 +1,5 @@
 angular.module('app').controller('codewarsCtrl', function($scope, mainSrv) {
 
-    $scope.advanced = [ 
-        {
-            name: 'Dummy'
-        },
-        {
-            name: 'Data'
-        }
-    ]
-
-    $scope.basic = [
-        {
-            name: 'Dummy'
-        },
-        {
-            name: 'Data'
-        }
-    ]
-
 
     $scope.basicList = (name) => {
         mainSrv.addBasic(name).then((res)=>{
@@ -31,5 +13,18 @@ angular.module('app').controller('codewarsCtrl', function($scope, mainSrv) {
         })
     }
 
+    $scope.recBasic = () => {
+        mainSrv.getBasic().then((res)=> {
+            $scope.basic = res.data
+        })
+    }
+    $scope.recBasic()
+
+    $scope.recAdvanced = () => {
+        mainSrv.getAdvanced().then((res)=> {
+            $scope.advanced = res.data
+        })
+    }
+    $scope.recAdvanced()
 
 })

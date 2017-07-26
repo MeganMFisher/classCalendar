@@ -12,7 +12,17 @@ module.exports = {
         })
     },
 
+    getBasic: (req, res) => {
+        req.app.get('db').getBasic().then((response) => {
+            res.send(response)
+        })
+    },
 
+    getAdvanced: (req, res) => {
+        req.app.get('db').getAdvanced().then((response) => {
+            res.send(response)
+        })
+    },
     
     getEvents: (req, res) => {
         req.app.get('db').getEvents().then((response) => {

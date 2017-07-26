@@ -16,6 +16,14 @@ angular.module('app').service('mainSrv', function($http){
     return $http.post('http://localhost:3001/advanced', data)
     }
 
+    this.getBasic = () => {
+        return $http.get('http://localhost:3001/basic')
+    }
+
+    this.getAdvanced = () => {
+        return $http.get('http://localhost:3001/advanced')
+    }
+
  
     //Events
 

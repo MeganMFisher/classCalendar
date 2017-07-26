@@ -22,6 +22,8 @@ const controller = require('./controller.js');
 
 app.post('/basic', controller.postBasic);
 app.post('/advanced', controller.postAdvanced);
+app.get('/basic', controller.getBasic);
+app.get('/advanced', controller.getAdvanced);
 app.get('/events', controller.getEvents);
 app.get('/todos', controller.getTodos);
 app.get('/goals', controller.getGoals);

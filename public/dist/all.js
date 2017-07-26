@@ -31,18 +31,6 @@ angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvi
 
 angular.module('app').controller('codewarsCtrl', function ($scope, mainSrv) {
 
-    $scope.advanced = [{
-        name: 'Dummy'
-    }, {
-        name: 'Data'
-    }];
-
-    $scope.basic = [{
-        name: 'Dummy'
-    }, {
-        name: 'Data'
-    }];
-
     $scope.basicList = function (name) {
         mainSrv.addBasic(name).then(function (res) {
             console.log('tada');
@@ -54,6 +42,20 @@ angular.module('app').controller('codewarsCtrl', function ($scope, mainSrv) {
             console.log('tada');
         });
     };
+
+    $scope.recBasic = function () {
+        mainSrv.getBasic().then(function (res) {
+            $scope.basic = res.data;
+        });
+    };
+    $scope.recBasic();
+
+    $scope.recAdvanced = function () {
+        mainSrv.getAdvanced().then(function (res) {
+            $scope.advanced = res.data;
+        });
+    };
+    $scope.recAdvanced();
 });
 'use strict';
 
@@ -236,6 +238,14 @@ angular.module('app').service('mainSrv', function ($http) {
             name: name
         };
         return $http.post('http://localhost:3001/advanced', data);
+    };
+
+    this.getBasic = function () {
+        return $http.get('http://localhost:3001/basic');
+    };
+
+    this.getAdvanced = function () {
+        return $http.get('http://localhost:3001/advanced');
     };
 
     //Events
