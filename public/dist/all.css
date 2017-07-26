@@ -849,7 +849,6 @@ form div {
 .inputBox textarea:focus, input:focus {
   padding-left: 10px;
   outline: none;
-  color: white;
   border: none;
   height: 25px; }
 
