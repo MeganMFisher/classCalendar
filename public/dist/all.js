@@ -33,26 +33,26 @@ angular.module('app').controller('codewarsCtrl', function ($scope, mainSrv) {
 
     $scope.basicList = function (name) {
         mainSrv.addBasic(name).then(function (res) {
-            console.log('tada');
+            $scope.recBasic();
         });
     };
 
     $scope.advancedList = function (name) {
         mainSrv.addAdvanced(name).then(function (res) {
-            console.log('tada');
+            $scope.recAdvanced();
         });
     };
 
     $scope.recBasic = function () {
         mainSrv.getBasic().then(function (res) {
-            $scope.basic = res.data;
+            $scope.basic = res.data.reverse();
         });
     };
     $scope.recBasic();
 
     $scope.recAdvanced = function () {
         mainSrv.getAdvanced().then(function (res) {
-            $scope.advanced = res.data;
+            $scope.advanced = res.data.reverse();
         });
     };
     $scope.recAdvanced();

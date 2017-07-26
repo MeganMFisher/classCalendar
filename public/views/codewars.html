@@ -2,8 +2,10 @@
     <div class='basicCodewarsBox'>
         <h2>Completed Basic</h2>
 
-        <input ng-model="basicName"></input>
-        <button ng-click="basicList(basicName)">Add</button>
+        <div>
+            <input ng-model="basicName"></input>
+            <button ng-click="basicList(basicName)">Add</button>
+        </div>
 
         <div ng-repeat='b in basic'>
             <p>{{ b.name }}</p>
@@ -13,8 +15,10 @@
     <div class='advancedCodewarsBox'>
         <h2>Completed Advanced</h2>
 
-        <input ng-model="advancedName"></input>
-        <button ng-click="advancedList(advancedName)">Add</button>
+        <div>
+            <input ng-model="advancedName"></input>
+            <button ng-click="advancedList(advancedName)">Add</button>
+        </div>
 
         <div ng-repeat='a in advanced'>
             <p>{{ a.name }}</p>
