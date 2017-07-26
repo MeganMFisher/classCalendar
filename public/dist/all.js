@@ -35,15 +35,23 @@ angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvi
 angular.module('app').controller('codewarsCtrl', function ($scope, mainSrv) {
 
     $scope.basicList = function (name) {
-        mainSrv.addBasic(name).then(function (res) {
-            $scope.recBasic();
-        });
+        if (!name) {
+            console.log('Argh');
+        } else {
+            mainSrv.addBasic(name).then(function (res) {
+                $scope.recBasic();
+            });
+        }
     };
 
     $scope.advancedList = function (name) {
-        mainSrv.addAdvanced(name).then(function (res) {
-            $scope.recAdvanced();
-        });
+        if (!name) {
+            console.log('Argh');
+        } else {
+            mainSrv.addAdvanced(name).then(function (res) {
+                $scope.recAdvanced();
+            });
+        }
     };
 
     $scope.recBasic = function () {
@@ -59,6 +67,20 @@ angular.module('app').controller('codewarsCtrl', function ($scope, mainSrv) {
         });
     };
     $scope.recAdvanced();
+
+    $scope.removeBasic = function (name) {
+        console.log(name);
+        mainSrv.removeBasic(name).then(function (res) {
+            $scope.recBasic();
+        });
+    };
+
+    $scope.removeAdvanced = function (name) {
+        console.log(name);
+        mainSrv.removeAdvanced(name).then(function (res) {
+            $scope.recAdvanced();
+        });
+    };
 });
 'use strict';
 
@@ -249,6 +271,14 @@ angular.module('app').service('mainSrv', function ($http) {
 
     this.getAdvanced = function () {
         return $http.get('http://localhost:3001/advanced');
+    };
+
+    this.removeBasic = function (name) {
+        return $http.delete('http://localhost:3001/basic/' + name);
+    };
+
+    this.removeAdvanced = function (name) {
+        return $http.delete('http://localhost:3001/advanced/' + name);
     };
 
     //Events

@@ -24,6 +24,8 @@ app.post('/basic', controller.postBasic);
 app.post('/advanced', controller.postAdvanced);
 app.get('/basic', controller.getBasic);
 app.get('/advanced', controller.getAdvanced);
+app.delete('/basic/:name', controller.deleteBasic);
+app.delete('/advanced/:name', controller.deleteAdvanced);
 app.get('/events', controller.getEvents);
 app.get('/todos', controller.getTodos);
 app.get('/goals', controller.getGoals);

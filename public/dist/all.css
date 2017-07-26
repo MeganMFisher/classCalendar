@@ -604,7 +604,7 @@ h1 {
 
 .codewarsBox button {
   width: 50px;
-  background: rgba(82, 141, 164, 0.3);
+  background: #528da4;
   outline: none;
   border: none;
   cursor: pointer;
@@ -646,6 +646,21 @@ h1 {
 
 .codewarsBox p {
   color: grey; }
+
+.problems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.problems div {
+  padding-right: 20px;
+  color: #528da4; }
 
 /* ******************************
              Calendar

@@ -23,6 +23,21 @@ module.exports = {
             res.send(response)
         })
     },
+
+    deleteBasic: (req, res) => {
+        console.log(req.params.name)
+        req.app.get('db').deleteBasic(req.params.name).then((response) => {
+            res.send('B Deleted')
+        })
+    },
+
+    deleteAdvanced: (req, res) => {
+        console.log(req.params.name)
+        req.app.get('db').deleteAdvanced(req.params.name).then((response) => {
+            res.send('A Deleted')
+        })
+    },
+
     
     getEvents: (req, res) => {
         req.app.get('db').getEvents().then((response) => {

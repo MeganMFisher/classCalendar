@@ -2,15 +2,23 @@ angular.module('app').controller('codewarsCtrl', function($scope, mainSrv) {
 
 
     $scope.basicList = (name) => {
-        mainSrv.addBasic(name).then((res)=>{
-            $scope.recBasic()
-        })
+        if(!name) {
+            console.log('Argh')
+        } else {
+            mainSrv.addBasic(name).then((res)=>{
+             $scope.recBasic()
+            })
+        }
     }
 
     $scope.advancedList = (name) => {
-        mainSrv.addAdvanced(name).then((res)=>{
-            $scope.recAdvanced()
-        })
+        if(!name) {
+            console.log('Argh')
+        } else {
+            mainSrv.addAdvanced(name).then((res)=>{
+             $scope.recAdvanced()
+            })
+        }
     }
 
     $scope.recBasic = () => {
@@ -26,5 +34,19 @@ angular.module('app').controller('codewarsCtrl', function($scope, mainSrv) {
         })
     }
     $scope.recAdvanced()
+
+    $scope.removeBasic = (name) => {
+        console.log(name)
+        mainSrv.removeBasic(name).then((res) => {
+            $scope.recBasic()
+        })
+    }
+
+    $scope.removeAdvanced = (name) => {
+        console.log(name)
+        mainSrv.removeAdvanced(name).then((res) => {
+            $scope.recAdvanced()
+        })
+    }
 
 })

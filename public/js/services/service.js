@@ -24,6 +24,14 @@ angular.module('app').service('mainSrv', function($http){
         return $http.get('http://localhost:3001/advanced')
     }
 
+    this.removeBasic = (name) => {
+        return $http.delete('http://localhost:3001/basic/' + name)
+    }
+
+    this.removeAdvanced = (name) => {
+        return $http.delete('http://localhost:3001/advanced/' + name)
+    }
+
  
     //Events
 
