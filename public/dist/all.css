@@ -444,6 +444,7 @@ nav div a {
 ****************************** */
 .homeBox {
   margin-top: 30px;
+  letter-spacing: 2px;
   width: 80%;
   margin-left: calc(10% - 30px);
   padding: 30px;
@@ -469,11 +470,11 @@ nav div a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #528da4;
+  background: rgba(82, 141, 164, 0.2);
   border: 1px solid black; }
 
 .fourSquare:hover {
-  background: rgba(82, 141, 164, 0.8); }
+  background: rgba(82, 141, 164, 0.3); }
 
 /* ******************************
              Resources
