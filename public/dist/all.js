@@ -2,7 +2,7 @@
 
 angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/resources');
 
     $stateProvider.state('calendar', {
         url: '/',
@@ -21,7 +21,35 @@ angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvi
     }).state('links', {
         url: '/links',
         templateUrl: './views/links.html'
+    }).state('codewars', {
+        url: '/codewars',
+        templateUrl: './views/codewars.html',
+        controller: 'codewarsCtrl'
     });
+});
+'use strict';
+
+angular.module('app').controller('codewarsCtrl', function ($scope) {
+
+    $scope.advanced = [{
+        name: 'Dummy'
+    }, {
+        name: 'Data'
+    }];
+
+    $scope.basic = [{
+        name: 'Dummy'
+    }, {
+        name: 'Data'
+    }];
+
+    $scope.basicList = function (name) {
+        console.log(name);
+    };
+
+    $scope.advancedList = function (name) {
+        console.log(name);
+    };
 });
 'use strict';
 

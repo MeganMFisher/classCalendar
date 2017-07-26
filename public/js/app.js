@@ -2,7 +2,7 @@ angular.module('app', ['ui.calendar', 'ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider){
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/resources');
 
     $stateProvider
         .state('calendar', {
@@ -32,4 +32,9 @@ angular.module('app', ['ui.calendar', 'ui.router'])
             templateUrl: './views/links.html'
         })
         
+        .state('codewars', {
+            url: '/codewars',
+            templateUrl: './views/codewars.html',
+            controller: 'codewarsCtrl'
+        })
 })
