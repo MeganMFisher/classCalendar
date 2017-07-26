@@ -2,10 +2,13 @@
 
 angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/resources');
+    $urlRouterProvider.otherwise('/');
 
-    $stateProvider.state('calendar', {
+    $stateProvider.state('home', {
         url: '/',
+        templateUrl: './views/home.html'
+    }).state('calendar', {
+        url: '/calendar',
         templateUrl: './views/calendar.html'
     }).state('goals', {
         url: '/goals',

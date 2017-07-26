@@ -400,6 +400,9 @@ body {
 h2 {
   color: white; }
 
+a {
+  text-decoration: none; }
+
 nav {
   width: 100%;
   height: 90px;
@@ -435,6 +438,208 @@ nav div a {
   text-decoration: none;
   font-size: 22px;
   letter-spacing: 3px; }
+
+/* ******************************
+             Home
+****************************** */
+.homeBox {
+  margin-top: 30px;
+  width: 80%;
+  margin-left: calc(10% - 30px);
+  padding: 30px;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #111;
+  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4); }
+
+.fourSquare {
+  width: 49%;
+  height: 35vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #528da4;
+  border: 1px solid black; }
+
+.fourSquare:hover {
+  background: rgba(82, 141, 164, 0.8); }
+
+/* ******************************
+             Resources
+****************************** */
+.resourcesBox {
+  margin-top: 30px;
+  width: 80%;
+  margin-left: calc(10% - 30px);
+  padding: 30px;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #111;
+  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4); }
+
+.resourcesBox div {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.resourcesBox h2 {
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  color: white;
+  font-weight: lighter; }
+
+.resourcesBox a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #222;
+  line-height: 2;
+  letter-spacing: 3px;
+  font-weight: bold;
+  width: 350px;
+  height: 40px;
+  background: #528da4;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid black; }
+
+.linksPage {
+  margin-top: 30px;
+  width: 80%;
+  margin-left: calc(10% - 30px);
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #111;
+  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4); }
+
+.bigBoxes {
+  width: 50%; }
+
+.linkBoxes {
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px; }
+
+.linkBoxes div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.linkBoxes a {
+  text-decoration: none;
+  color: grey; }
+
+/* ******************************
+            Codewars
+****************************** */
+.codewarsBox {
+  margin-top: 30px;
+  width: 80%;
+  margin-left: calc(10% - 30px);
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  background: #111;
+  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4); }
+
+.codewarsBox button {
+  width: 50px;
+  background: #528da4;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  height: 25px; }
+
+.basicCodewarsBox {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-right: 1px solid white; }
+
+.advancedCodewarsBox {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.codewarsBox p {
+  color: grey; }
 
 /* ******************************
              Calendar
@@ -658,168 +863,3 @@ form div {
 /* ******************************
               To Do
 ****************************** */
-/* ******************************
-             Resources
-****************************** */
-.resourcesBox {
-  margin-top: 30px;
-  width: 80%;
-  margin-left: calc(10% - 30px);
-  padding: 30px;
-  height: 70vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #111;
-  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4); }
-
-.resourcesBox div {
-  width: 50%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-.resourcesBox h2 {
-  margin-bottom: 30px;
-  letter-spacing: 3px;
-  border-bottom: 1px solid white;
-  padding-bottom: 5px;
-  color: white;
-  font-weight: lighter; }
-
-.resourcesBox a {
-  text-decoration: none;
-  font-size: 20px;
-  color: #222;
-  line-height: 2;
-  letter-spacing: 3px;
-  font-weight: bold;
-  width: 350px;
-  height: 40px;
-  background: #528da4;
-  text-align: center;
-  margin-bottom: 20px;
-  border: 1px solid black; }
-
-.linksPage {
-  margin-top: 30px;
-  width: 80%;
-  margin-left: calc(10% - 30px);
-  padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #111;
-  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4); }
-
-.bigBoxes {
-  width: 50%; }
-
-.linkBoxes {
-  width: 100%;
-  padding-left: 100px;
-  padding-right: 100px; }
-
-.linkBoxes div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-
-.linkBoxes a {
-  text-decoration: none;
-  color: grey; }
-
-/* ******************************
-            Codewars
-****************************** */
-.codewarsBox {
-  margin-top: 30px;
-  width: 80%;
-  margin-left: calc(10% - 30px);
-  padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  background: #111;
-  -webkit-box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 6px 6px 17px 2px rgba(0, 0, 0, 0.4); }
-
-.codewarsBox button {
-  width: 50px;
-  background: #528da4;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  height: 25px; }
-
-.basicCodewarsBox {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-right: 1px solid white; }
-
-.advancedCodewarsBox {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.codewarsBox p {
-  color: grey; }
