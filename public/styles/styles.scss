@@ -118,6 +118,7 @@ nav div a {
     width: 350px;
     height: 40px;
     background: #528da4;
+        // background: rgba(82, 141, 164, .3);
     text-align: center;
     margin-bottom: 20px;
     border: 1px solid black;
@@ -182,7 +183,8 @@ nav div a {
 
 .codewarsBox button {
     width: 50px;
-    background: #528da4;
+    // background: #528da4;
+    background: rgba(82, 141, 164, .3);
     outline: none;
     border: none;
     cursor: pointer;

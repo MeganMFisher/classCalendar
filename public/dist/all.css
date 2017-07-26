@@ -599,7 +599,7 @@ nav div a {
 
 .codewarsBox button {
   width: 50px;
-  background: #528da4;
+  background: rgba(82, 141, 164, 0.3);
   outline: none;
   border: none;
   cursor: pointer;
