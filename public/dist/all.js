@@ -29,7 +29,7 @@ angular.module('app', ['ui.calendar', 'ui.router']).config(function ($stateProvi
 });
 'use strict';
 
-angular.module('app').controller('codewarsCtrl', function ($scope) {
+angular.module('app').controller('codewarsCtrl', function ($scope, mainSrv) {
 
     $scope.advanced = [{
         name: 'Dummy'
@@ -44,11 +44,15 @@ angular.module('app').controller('codewarsCtrl', function ($scope) {
     }];
 
     $scope.basicList = function (name) {
-        console.log(name);
+        mainSrv.addBasic(name).then(function (res) {
+            console.log('tada');
+        });
     };
 
     $scope.advancedList = function (name) {
-        console.log(name);
+        mainSrv.addAdvanced(name).then(function (res) {
+            console.log('tada');
+        });
     };
 });
 'use strict';
@@ -217,6 +221,22 @@ angular.module('app').controller('todoCtrl', function ($scope, mainSrv) {
 'use strict';
 
 angular.module('app').service('mainSrv', function ($http) {
+
+    //Codewars 
+
+    this.addBasic = function (name) {
+        var data = {
+            name: name
+        };
+        return $http.post('http://localhost:3001/basic', data);
+    };
+
+    this.addAdvanced = function (name) {
+        var data = {
+            name: name
+        };
+        return $http.post('http://localhost:3001/advanced', data);
+    };
 
     //Events
 

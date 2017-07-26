@@ -1,4 +1,18 @@
 module.exports = {
+
+    postBasic: (req, res) => {
+        req.app.get('db').postBasic(req.body.name).then((response) => {
+            res.send('B Added')
+        })
+    },
+
+    postAdvanced: (req, res) => {
+        req.app.get('db').postAdvanced(req.body.name).then((response) => {
+            res.send('A Added')
+        })
+    },
+
+
     
     getEvents: (req, res) => {
         req.app.get('db').getEvents().then((response) => {

@@ -1,5 +1,13 @@
 -- DROP TABLE if exists events
 
+CREATE TABLE basic(
+    name varchar
+)
+
+CREATE TABLE advanced(
+    name varchar
+)
+
 CREATE TABLE events(
  title varchar,
  description varchar,

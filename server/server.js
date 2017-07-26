@@ -20,7 +20,8 @@ massive(config.database).then(db => {
 
 const controller = require('./controller.js');
 
-
+app.post('/basic', controller.postBasic);
+app.post('/advanced', controller.postAdvanced);
 app.get('/events', controller.getEvents);
 app.get('/todos', controller.getTodos);
 app.get('/goals', controller.getGoals);

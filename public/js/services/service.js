@@ -1,4 +1,21 @@
 angular.module('app').service('mainSrv', function($http){
+
+    //Codewars 
+
+    this.addBasic = (name) => {
+        var data = {
+            name: name
+        }
+    return $http.post('http://localhost:3001/basic', data)
+    }
+
+    this.addAdvanced = (name) => {
+        var data = {
+            name: name
+        }
+    return $http.post('http://localhost:3001/advanced', data)
+    }
+
  
     //Events
 
@@ -10,14 +27,6 @@ angular.module('app').service('mainSrv', function($http){
         // console.log(eventInfo)
     return $http.post('http://localhost:3001/events', eventInfo)
     }
-
-
-
-
-
-
-
-
 
 
     //Todos

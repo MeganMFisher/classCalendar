@@ -1,4 +1,4 @@
-angular.module('app').controller('codewarsCtrl', function($scope) {
+angular.module('app').controller('codewarsCtrl', function($scope, mainSrv) {
 
     $scope.advanced = [ 
         {
@@ -20,11 +20,15 @@ angular.module('app').controller('codewarsCtrl', function($scope) {
 
 
     $scope.basicList = (name) => {
-        console.log(name)
+        mainSrv.addBasic(name).then((res)=>{
+            console.log('tada')
+        })
     }
 
     $scope.advancedList = (name) => {
-        console.log(name)
+        mainSrv.addAdvanced(name).then((res)=>{
+            console.log('tada')
+        })
     }
 
 
