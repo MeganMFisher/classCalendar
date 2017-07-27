@@ -1,7 +1,7 @@
 const express = require('express'),
       bodyParser = require('body-parser'),
       massive = require('massive'),
-      config = require('./config.js'),
+    //   config = require('./config.js'),
       cors = require('cors')
 
 
@@ -12,16 +12,16 @@ app.use(bodyParser.json());
 app.use(express.static('./public'));
 app.use(cors());
 
-massive(config.database).then(db => {
-    app.set('db', db)
-}).catch((err) => {
-    console.log(err)
-})
+// massive(config.database).then(db => {
+//     app.set('db', db)
+// }).catch((err) => {
+//     console.log(err)
+// })
 
 
-//  massive(process.env.database).then ((db) => {
-//             app.set('db', db);
-//     });
+ massive(process.env.database).then ((db) => {
+            app.set('db', db);
+    });
 
 
 const controller = require('./controller.js');
