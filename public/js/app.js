@@ -11,22 +11,22 @@ angular.module('app', ['ui.calendar', 'ui.router'])
             templateUrl: './views/home.html'
         })
 
-        .state('calendar', {
-            url: '/calendar',
-            templateUrl: './views/calendar.html'
-        })
+        // .state('calendar', {
+        //     url: '/calendar',
+        //     templateUrl: './views/calendar.html'
+        // })
 
-        .state('goals',{
-            url: '/goals',
-            templateUrl: './views/goals.html',
-            controller: 'goalCtrl'
-        })
+        // .state('goals',{
+        //     url: '/goals',
+        //     templateUrl: './views/goals.html',
+        //     controller: 'goalCtrl'
+        // })
 
-        .state('todo', {
-            url: '/todo',   
-            templateUrl: './views/todo.html',
-            controller: 'todoCtrl'
-        })
+        // .state('todo', {
+        //     url: '/todo',   
+        //     templateUrl: './views/todo.html',
+        //     controller: 'todoCtrl'
+        // })
 
         .state('resources', {
             url: '/resources',   
