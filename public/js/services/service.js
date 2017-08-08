@@ -6,30 +6,30 @@ angular.module('app').service('mainSrv', function($http){
         var data = {
             name: name
         }
-    return $http.post('http://localhost:3001/basic', data)
+    return $http.post('https://cohort-resources.herokuapp.com/#!/basic', data)
     }
 
     this.addAdvanced = (name) => {
         var data = {
             name: name
         }
-    return $http.post('http://localhost:3001/advanced', data)
+    return $http.post('https://cohort-resources.herokuapp.com/#!/advanced', data)
     }
 
     this.getBasic = () => {
-        return $http.get('http://localhost:3001/basic')
+        return $http.get('https://cohort-resources.herokuapp.com/#!/basic')
     }
 
     this.getAdvanced = () => {
-        return $http.get('http://localhost:3001/advanced')
+        return $http.get('https://cohort-resources.herokuapp.com/#!/advanced')
     }
 
     this.removeBasic = (name) => {
-        return $http.delete('http://localhost:3001/basic/' + name)
+        return $http.delete('https://cohort-resources.herokuapp.com/#!/basic/' + name)
     }
 
     this.removeAdvanced = (name) => {
-        return $http.delete('http://localhost:3001/advanced/' + name)
+        return $http.delete('https://cohort-resources.herokuapp.com/#!/advanced/' + name)
     }
 
  
