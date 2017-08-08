@@ -41,14 +41,14 @@ angular.module('app').service('mainSrv', function($http){
 
     this.addEvent = (eventInfo) => {
         // console.log(eventInfo)
-    return $http.post('http://localhost:3001/events', eventInfo)
+    return $http.post('/events', eventInfo)
     }
 
 
     //Todos
 
     this.getTodos = () => {
-    return $http.get('http://localhost:3001/todos')
+    return $http.get('/todos')
     }
 
     this.mentorTodos = (res, mID) => {
@@ -64,13 +64,13 @@ angular.module('app').service('mainSrv', function($http){
     }
 
     this.addTodo = (todoInfo) => {
-    return $http.post('http://localhost:3001/todos', todoInfo)
+    return $http.post('/todos', todoInfo)
     }
 
     //Goals
 
     this.getGoals = () => {
-    return $http.get('http://localhost:3001/goals')
+    return $http.get('/goals')
     }
 
    this.mentorGoals = (res, mID) => {
@@ -86,7 +86,7 @@ angular.module('app').service('mainSrv', function($http){
 
 
     this.addGoal = (goalInfo) => {
-    return $http.post('http://localhost:3001/goals', goalInfo)
+    return $http.post('/goals', goalInfo)
     }
 
 })
