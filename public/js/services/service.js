@@ -6,37 +6,37 @@ angular.module('app').service('mainSrv', function($http){
         var data = {
             name: name
         }
-    return $http.post('https://cohort-resources.herokuapp.com/#!/basic', data)
+    return $http.post('/basic', data)
     }
 
     this.addAdvanced = (name) => {
         var data = {
             name: name
         }
-    return $http.post('https://cohort-resources.herokuapp.com/#!/advanced', data)
+    return $http.post('/advanced', data)
     }
 
     this.getBasic = () => {
-        return $http.get('https://cohort-resources.herokuapp.com/#!/basic')
+        return $http.get('/basic')
     }
 
     this.getAdvanced = () => {
-        return $http.get('https://cohort-resources.herokuapp.com/#!/advanced')
+        return $http.get('/advanced')
     }
 
     this.removeBasic = (name) => {
-        return $http.delete('https://cohort-resources.herokuapp.com/#!/basic/' + name)
+        return $http.delete('/basic/' + name)
     }
 
     this.removeAdvanced = (name) => {
-        return $http.delete('https://cohort-resources.herokuapp.com/#!/advanced/' + name)
+        return $http.delete('/advanced/' + name)
     }
 
  
     //Events
 
     this.getEvents = () => {
-    return $http.get('http://localhost:3001/events')
+    return $http.get('/events')
     }
 
     this.addEvent = (eventInfo) => {
