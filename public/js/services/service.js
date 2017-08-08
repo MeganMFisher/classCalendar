@@ -6,49 +6,49 @@ angular.module('app').service('mainSrv', function($http){
         var data = {
             name: name
         }
-    return $http.post('http://cohort-resources.herokuapp.com/#!/basic', data)
+    return $http.post('https://cohort-resources.herokuapp.com/#!/basic', data)
     }
 
     this.addAdvanced = (name) => {
         var data = {
             name: name
         }
-    return $http.post('http://cohort-resources.herokuapp.com/#!/advanced', data)
+    return $http.post('https://cohort-resources.herokuapp.com/#!/advanced', data)
     }
 
     this.getBasic = () => {
-        return $http.get('http://cohort-resources.herokuapp.com/#!/basic')
+        return $http.get('https://cohort-resources.herokuapp.com/#!/basic')
     }
 
     this.getAdvanced = () => {
-        return $http.get('http://cohort-resources.herokuapp.com/#!/advanced')
+        return $http.get('https://cohort-resources.herokuapp.com/#!/advanced')
     }
 
     this.removeBasic = (name) => {
-        return $http.delete('http://cohort-resources.herokuapp.com/#!/basic/' + name)
+        return $http.delete('https://cohort-resources.herokuapp.com/#!/basic/' + name)
     }
 
     this.removeAdvanced = (name) => {
-        return $http.delete('http://cohort-resources.herokuapp.com/#!/advanced/' + name)
+        return $http.delete('https://cohort-resources.herokuapp.com/#!/advanced/' + name)
     }
 
  
     //Events
 
     this.getEvents = () => {
-    return $http.get('http://cohort-resources.herokuapp.com/#!/events')
+    return $http.get('https://cohort-resources.herokuapp.com/#!/events')
     }
 
     this.addEvent = (eventInfo) => {
         // console.log(eventInfo)
-    return $http.post('http://cohort-resources.herokuapp.com/#!/events', eventInfo)
+    return $http.post('https://cohort-resources.herokuapp.com/#!/events', eventInfo)
     }
 
 
     //Todos
 
     this.getTodos = () => {
-    return $http.get('http://cohort-resources.herokuapp.com/#!/todos')
+    return $http.get('https://cohort-resources.herokuapp.com/#!/todos')
     }
 
     this.mentorTodos = (res, mID) => {
@@ -64,13 +64,13 @@ angular.module('app').service('mainSrv', function($http){
     }
 
     this.addTodo = (todoInfo) => {
-    return $http.post('http://cohort-resources.herokuapp.com/#!/todos', todoInfo)
+    return $http.post('https://cohort-resources.herokuapp.com/#!/todos', todoInfo)
     }
 
     //Goals
 
     this.getGoals = () => {
-    return $http.get('http://cohort-resources.herokuapp.com/#!/goals')
+    return $http.get('https://cohort-resources.herokuapp.com/#!/goals')
     }
 
    this.mentorGoals = (res, mID) => {
@@ -86,7 +86,7 @@ angular.module('app').service('mainSrv', function($http){
 
 
     this.addGoal = (goalInfo) => {
-    return $http.post('http://cohort-resources.herokuapp.com/#!/goals', goalInfo)
+    return $http.post('https://cohort-resources.herokuapp.com/#!/goals', goalInfo)
     }
 
 })
